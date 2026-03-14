@@ -6,10 +6,14 @@
 	<title>Temple Album</title>
 	<meta name="description" content="A photo album of temples around the world.">
 	<meta name="author" content="Your Name">
+	<!-- Google Fonts: Montserrat and Roboto -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<!-- Mobile-first: base styles first, then large styles -->
-	<link rel="stylesheet" href="wdd131/styles/temple.css">
-	<link rel="stylesheet" href="wdd131/styles/temple-large.css">
-	<script src="wdd131/scripts/temple.js" defer></script>
+	<link rel="stylesheet" href="styles/temples.css">
+	<link rel="stylesheet" href="styles/temples-large.css">
+	<script src="scripts/temples.js" defer></script>
 </head>
 <body>
 	<header>
@@ -26,53 +30,48 @@
 	</header>
 	<main>
 	</main>
-	<h1>Temple Album</h1>
-	<section class="temple-gallery">
+		<h1>Temple Album</h1>
+		<section class="temple-gallery">
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 1">
+				<img src="images/temple.webp" alt="Temple 1">
 				<figcaption>Temple 1</figcaption>
 			</figure>
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 2">
+				<img src="images/temple.webp" alt="Temple 2">
 				<figcaption>Temple 2</figcaption>
 			</figure>
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 3">
+				<img src="images/temple.webp" alt="Temple 3">
 				<figcaption>Temple 3</figcaption>
 			</figure>
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 4">
+				<img src="images/temple.webp" alt="Temple 4">
 				<figcaption>Temple 4</figcaption>
 			</figure>
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 5">
+				<img src="images/temple.webp" alt="Temple 5">
 				<figcaption>Temple 5</figcaption>
 			</figure>
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 6">
+				<img src="images/temple.webp" alt="Temple 6">
 				<figcaption>Temple 6</figcaption>
 			</figure>
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 7">
+				<img src="images/temple.webp" alt="Temple 7">
 				<figcaption>Temple 7</figcaption>
 			</figure>
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 8">
+				<img src="images/temple.webp" alt="Temple 8">
 				<figcaption>Temple 8</figcaption>
 			</figure>
 			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 9">
+				<img src="images/temple.webp" alt="Temple 9">
 				<figcaption>Temple 9</figcaption>
 			</figure>
-	</section>
+		</section>
 	<footer>
 		<p>&copy; <span id="year"></span> | Temple Album | Your Name</p>
 		<p>Last Modified: <span id="lastModified"></span></p>
 	</footer>
-	<script>
-		// Dynamic year and last modified
-		document.getElementById('year').textContent = new Date().getFullYear();
-		document.getElementById('lastModified').textContent = document.lastModified;
-	</script>
 </body>
 </html>
