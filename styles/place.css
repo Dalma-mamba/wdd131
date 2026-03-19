@@ -1,21 +1,18 @@
 :root {
-    --primary-color: #0033a0;
-    --secondary-color: #d21034;
-    --accent-color: #ffd100;
-    --text-color: #222;
-    --bg-color: #f5f5f5;
+    --primary: #0033a0;
+    --secondary: #d21034;
+    --accent: #ffd100;
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: #f4f4f4;
 }
 
 /* HEADER */
 header {
-    background: var(--primary-color);
+    background: var(--primary);
     color: white;
     text-align: center;
     padding: 1rem;
@@ -25,7 +22,6 @@ header {
 .hero img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
 /* MAIN */
@@ -36,9 +32,9 @@ main {
 /* CARDS */
 .card {
     background: white;
-    margin: 1rem 0;
     padding: 1rem;
-    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
 }
 
 /* WEATHER ICON */
@@ -48,13 +44,13 @@ main {
 
 /* FOOTER */
 footer {
+    background: var(--secondary);
+    color: white;
     text-align: center;
     padding: 1rem;
-    background: var(--secondary-color);
-    color: white;
 }
 
-/* MEDIA QUERY (WIDE VIEW) */
+/* MEDIA QUERY REQUIRED */
 @media (min-width: 768px) {
     main {
         display: grid;
@@ -62,7 +58,7 @@ footer {
         gap: 1rem;
     }
 
-    /* pseudo-element for weather icon */
+    /* REQUIRED pseudo-element */
     .weather h2::after {
         content: " ⛅";
     }

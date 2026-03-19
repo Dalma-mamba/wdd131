@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- REQUIRED META -->
+    <title>Explore Eswatini</title>
+    <meta name="description" content="Explore Eswatini, a beautiful country known for its culture, wildlife, and scenic landscapes.">
+    <meta name="author" content="Manelisi Mamba">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore Eswatini</h1>
+</header>
+
+<!-- HERO IMAGE (FIXED: proper srcset + WebP usage) -->
+<section class="hero">
+    <picture>
+        <source srcset="wdd131/images/landscapes.webp" media="(min-width: 768px)">
+        <img src="wdd131/images/landscapes.webp" alt="Beautiful landscape of Eswatini">
+    </picture>
+</section>
+
+<main>
+
+    <!-- ABOUT -->
+    <section class="card">
+        <h2>About</h2>
+        <p>
+            Eswatini is a beautiful country in Southern Africa known for its mountains,
+            wildlife, and rich culture. It offers stunning landscapes and a peaceful environment.
+        </p>
+    </section>
+
+    <!-- WEATHER -->
+    <section class="card weather">
+        <h2>Weather</h2>
+
+        <!-- FIXED: must be SVG -->
+        <img src="wdd131/images/weather.svg" alt="Weather icon" class="weather-icon">
+
+        <p>Temperature: <span id="temp">8</span> °C</p>
+        <p>Wind Speed: <span id="wind">10</span> km/h</p>
+        <p>Wind Chill: <span id="windchill"></span></p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> Eswatini</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>
