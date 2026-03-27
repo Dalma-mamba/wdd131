@@ -1,0 +1,21 @@
+/* temples-large.css - Styles for larger screens */
+@media (min-width: 800px) {
+	main {
+		max-width: 1200px;
+		padding: 2rem;
+	}
+	.temple-gallery {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+	nav ul {
+		gap: 2rem;
+		font-size: 1.2rem;
+	}
+	figure {
+		padding: 2rem;
+	}
+	img {
+		max-width: 360px;
+	}
+}
