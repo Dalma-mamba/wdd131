@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <fieldset>
+                <legend>Product Review</legend>
+                
+                <label for="product-name">Product Name:</label>
+                <select id="product-name" name="product-name" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    
+                </select>
+                
+                <fieldset>
+                    <legend>Overall Rating:</legend>
+                    <label for="rating-1">☆</label>
+                    <input type="radio" id="rating-1" name="rating" value="1" required>
+                    <label for="rating-2">☆☆</label>
+                    <input type="radio" id="rating-2" name="rating" value="2" required>
+                    <label for="rating-3">☆☆☆</label>
+                    <input type="radio" id="rating-3" name="rating" value="3" required>
+                    <label for="rating-4">☆☆☆☆</label>
+                    <input type="radio" id="rating-4" name="rating" value="4" required>
+                    <label for="rating-5">☆☆☆☆☆</label>
+                    <input type="radio" id="rating-5" name="rating" value="5" required>
+                </fieldset>
+                
+                <label for="install-date">Date of Installation:</label>
+                <input type="date" id="install-date" name="install-date" required>
+                
+                <fieldset>
+                    <legend>Useful Features:</legend>
+                    <label for="feature-1">
+                        <input type="checkbox" id="feature-1" name="features" value="Feature 1"> Feature 1
+                    </label>
+                    <label for="feature-2">
+                        <input type="checkbox" id="feature-2" name="features" value="Feature 2"> Feature 2
+                    </label>
+                    <label for="feature-3">
+                        <input type="checkbox" id="feature-3" name="features" value="Feature 3"> Feature 3
+                    </label>
+                </fieldset>
+                
+                <label for="written-review">Written Review:</label>
+                <textarea id="written-review" name="written-review"></textarea>
+                
+                <label for="user-name">User Name:</label>
+                <input type="text" id="user-name" name="user-name">
+                
+                <input type="submit" value="Submit Review">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 Product Reviews. All rights reserved.</p>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+</html>
