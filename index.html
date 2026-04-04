@@ -1,47 +1,71 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 – Dynamic Web Fundamentals – Dalnjebo Mamba</title>
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Dalnjebo Mamba. Course resources, assignments, and web development learning.">
+    <title>Explore Eswatini</title>
+    <meta name="description" content="Explore Eswatini, a travel guide for culture, wildlife, and scenic landscapes.">
     <meta name="author" content="Dalnjebo Mamba">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="wdd131/styles/temple.css">
-    <script src="wdd131/scripts/temple.js" defer></script>
+    <link rel="stylesheet" href="styles/place.css">
 </head>
 <body>
     <header>
-        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <div class="brand">
+            <h1>Explore Eswatini</h1>
+            <p>Travel guides, cultural highlights, and safe planning tips for first-time visitors.</p>
+        </div>
         <nav>
             <ul>
-                <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a></li>
-                <li><a href="#">Final Project Folder</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temples.html">Destinations</a></li>
+                <li><a href="form.html">Plan Trip</a></li>
+                <li><a href="references.html">References</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h1>Dalnjebo Mamba</h1>
-        <section class="card">
-            <h2>About Me</h2>
-            <img src="wdd131/images/photo.jpg" alt="Dalnjebo Mamba">
-            <p>Hello! I'm Dalnjebo Mamba from Eswatini. I am passionate about web development and learning new technologies.</p>
+        <section class="hero">
+            <picture>
+                <source srcset="wdd131/images/landscapes.webp" media="(min-width: 768px)">
+                <img src="wdd131/images/landscapes.webp" alt="Rolling hills and sunset in Eswatini" loading="lazy">
+            </picture>
         </section>
+
         <section class="card">
-            <h2>My Interests</h2>
-            <img src="wdd131/images/interest.avif" alt="Interest Image" width="200">
-            <p>I enjoy coding, reading scriptures, and exploring new places. This course will help me improve my web development skills.</p>
+            <h2>Why Visit Eswatini?</h2>
+            <p>Eswatini is one of Africa's last monarchies, offering a welcoming journey through rich traditions, protected wildlife reserves, and dramatic mountain scenery. This website helps travelers discover cultural festivals, national parks, and ideal itineraries.</p>
+        </section>
+
+        <section class="card split">
+            <article>
+                <h2>Top Travel Themes</h2>
+                <ul>
+                    <li>Wildlife safaris and private reserves</li>
+                    <li>Local culture and craft markets</li>
+                    <li>Scenic hikes in the Ezulwini Valley</li>
+                    <li>Family-friendly adventure tours</li>
+                </ul>
+            </article>
+            <article>
+                <h2>What You Can Do</h2>
+                <p>Plan a trip to see wildlife, attend a reed dance or cultural village, and explore waterfalls, hiking trails, and heritage sites. The site includes destination details, a travel planning form, and source citations for all referenced content.</p>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2>Start Planning Today</h2>
+            <p>Use the <a href="form.html">Plan Trip</a> page to request a custom itinerary and get a summary of your travel plan. Visit the <a href="temples.html">Destinations</a> page for region-based highlights and filtered travel ideas.</p>
         </section>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentyear"></span> Dalnjebo Mamba, Eswatini</p>
-        <p id="lastModified"></p>
+        <p>&copy; 2026 Explore Eswatini</p>
+        <p><a href="references.html">References</a></p>
     </footer>
 </body>
 </html>

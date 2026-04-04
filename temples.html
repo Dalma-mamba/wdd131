@@ -1,77 +1,47 @@
-<!doctype html>
-<html lang="en-US">
+﻿<!doctype html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Temple Album</title>
-	<meta name="description" content="A photo album of temples around the world.">
-	<meta name="author" content="Your Name">
-	<!-- Google Fonts: Montserrat and Roboto -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-	<!-- Mobile-first: base styles first, then large styles -->
-	<link rel="stylesheet" href="styles/temples.css">
-	<link rel="stylesheet" href="styles/temples-large.css">
-	<script src="scripts/temples.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Eswatini - Destinations</title>
+    <meta name="description" content="Destination highlights in Eswatini with filterable travel ideas.">
+    <meta name="author" content="Dalnjebo Mamba">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
 </head>
 <body>
-	<header>
-		<h1>Temple Album</h1>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#old">Old</a></li>
-				<li><a href="#new">New</a></li>
-				<li><a href="#large">Large</a></li>
-				<li><a href="#small">Small</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-	</main>
-		<h1>Temple Album</h1>
-		<section class="temple-gallery">
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 1">
-				<figcaption>Temple 1</figcaption>
-			</figure>
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 2">
-				<figcaption>Temple 2</figcaption>
-			</figure>
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 3">
-				<figcaption>Temple 3</figcaption>
-			</figure>
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 4">
-				<figcaption>Temple 4</figcaption>
-			</figure>
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 5">
-				<figcaption>Temple 5</figcaption>
-			</figure>
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 6">
-				<figcaption>Temple 6</figcaption>
-			</figure>
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 7">
-				<figcaption>Temple 7</figcaption>
-			</figure>
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 8">
-				<figcaption>Temple 8</figcaption>
-			</figure>
-			<figure>
-				<img src="wdd131/images/temple.webp" alt="Temple 9">
-				<figcaption>Temple 9</figcaption>
-			</figure>
-		</section>
-	<footer>
-		<p>&copy; <span id="year"></span> | Temple Album | Your Name</p>
-		<p>Last Modified: <span id="lastModified"></span></p>
-	</footer>
+    <header>
+        <h1>Eswatini Destinations</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="form.html">Plan Trip</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="filter-bar">
+            <p>Filter destinations by travel theme:</p>
+            <div class="filters">
+                <button data-filter="all">All</button>
+                <button data-filter="wildlife">Wildlife</button>
+                <button data-filter="culture">Culture</button>
+                <button data-filter="waterfall">Waterfalls</button>
+            </div>
+        </section>
+
+        <section id="destination-container" class="temple-gallery"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Explore Eswatini</p>
+        <p><a href="references.html">References</a></p>
+    </footer>
 </body>
 </html>

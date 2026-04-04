@@ -1,19 +1,15 @@
-// Display review details
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
-    
-    // Display form data
-    document.getElementById('product-name').textContent = urlParams.get('product-name') || 'N/A';
-    document.getElementById('rating').textContent = urlParams.get('rating') || 'N/A';
-    document.getElementById('install-date').textContent = urlParams.get('install-date') || 'N/A';
-    const features = urlParams.getAll('features');
-    document.getElementById('features').textContent = features.length > 0 ? features.join(', ') : 'None';
-    document.getElementById('written-review').textContent = urlParams.get('written-review') || 'N/A';
-    document.getElementById('user-name').textContent = urlParams.get('user-name') || 'Anonymous';
-    
-    // Increment and display review count
-    let count = parseInt(localStorage.getItem('reviewCount')) || 0;
-    count++;
-    localStorage.setItem('reviewCount', count);
+
+    document.getElementById('package-name').textContent = urlParams.get('destination-package') || 'N/A';
+    document.getElementById('group-size').textContent = urlParams.get('group-size') || 'N/A';
+    document.getElementById('start-date').textContent = urlParams.get('start-date') || 'N/A';
+    const interests = urlParams.getAll('interests');
+    document.getElementById('interests').textContent = interests.length > 0 ? interests.join(', ') : 'None';
+    document.getElementById('special-requests').textContent = urlParams.get('special-requests') || 'None';
+    document.getElementById('user-name').textContent = urlParams.get('user-name') || 'Guest';
+    document.getElementById('email').textContent = urlParams.get('email') || 'Not provided';
+
+    const count = parseInt(localStorage.getItem('tripRequestCount')) || 0;
     document.getElementById('count').textContent = count;
 });

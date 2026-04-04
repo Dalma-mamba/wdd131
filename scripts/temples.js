@@ -1,56 +1,87 @@
-// temples.js - Footer and Hamburger Menu
-// Footer copyright year and last modified
-document.addEventListener('DOMContentLoaded', function() {
-  const yearSpan = document.getElementById('year');
-  const lastModifiedSpan = document.getElementById('lastModified');
-  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-  if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;
-
-  // Hamburger menu
-  const nav = document.querySelector('nav ul');
-  const header = document.querySelector('header');
-  if (nav && header) {
-    // Create hamburger button
-    const hamburger = document.createElement('button');
-    hamburger.className = 'hamburger';
-    hamburger.setAttribute('aria-label', 'Open navigation menu');
-    hamburger.innerHTML = '&#9776;'; // Hamburger icon
-    header.insertBefore(hamburger, header.querySelector('nav'));
-
-    // Create close button
-    const closeBtn = document.createElement('button');
-    closeBtn.className = 'close-menu';
-    closeBtn.setAttribute('aria-label', 'Close navigation menu');
-    closeBtn.innerHTML = '&times;'; // X icon
-    nav.parentNode.insertBefore(closeBtn, nav);
-    closeBtn.style.display = 'none';
-
-    // Toggle menu
-    function showMenu() {
-      nav.style.display = 'flex';
-      hamburger.style.display = 'none';
-      closeBtn.style.display = 'inline-block';
+const destinations = [
+    {
+        name: 'Mlilwane Wildlife Sanctuary',
+        region: 'Hhohho',
+        theme: 'wildlife',
+        description: 'A protected reserve with easy walking trails, zebras, antelope, and birdwatching.',
+        imageUrl: 'wdd131/images/landscapes.webp'
+    },
+    {
+        name: 'Mantenga Cultural Village',
+        region: 'Hhohho',
+        theme: 'culture',
+        description: 'Experience Swazi culture with traditional dances, local crafts, and village storytelling.',
+        imageUrl: 'wdd131/images/interest.avif'
+    },
+    {
+        name: 'Maguga Dam & Falls',
+        region: 'Lubombo',
+        theme: 'waterfall',
+        description: 'A scenic dam and waterfall site ideal for hiking, photography, and sunset views.',
+        imageUrl: 'wdd131/images/landscapes.webp'
+    },
+    {
+        name: 'Mkhaya Game Reserve',
+        region: 'Lubombo',
+        theme: 'wildlife',
+        description: 'A private reserve where visitors can see rhinos, giraffes, and rare antelope species.',
+        imageUrl: 'wdd131/images/landscapes.webp'
+    },
+    {
+        name: 'Reed Dance Festival',
+        region: 'Lubombo',
+        theme: 'culture',
+        description: 'One of Eswatini’s most famous ceremonies celebrating music, dance, and traditional dress.',
+        imageUrl: 'wdd131/images/interest.avif'
     }
-    function hideMenu() {
-      nav.style.display = 'none';
-      hamburger.style.display = 'inline-block';
-      closeBtn.style.display = 'none';
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('destination-container');
+    const filterButtons = document.querySelectorAll('.filters button');
+
+    function renderDestinations(list) {
+        container.innerHTML = '';
+        list.forEach(destination => {
+            const card = document.createElement('article');
+            card.className = 'destination-card';
+            card.innerHTML = `
+                <img src="${destination.imageUrl}" alt="${destination.name}" loading="lazy">
+                <div class="destination-content">
+                    <h2>${destination.name}</h2>
+                    <p class="meta">Region: ${destination.region} | Theme: ${destination.theme}</p>
+                    <p>${destination.description}</p>
+                </div>
+            `;
+            container.appendChild(card);
+        });
     }
 
-    hamburger.addEventListener('click', showMenu);
-    closeBtn.addEventListener('click', hideMenu);
-
-    // Responsive: show/hide hamburger based on screen size
-    function handleResize() {
-      if (window.innerWidth < 800) {
-        hideMenu();
-      } else {
-        nav.style.display = 'flex';
-        hamburger.style.display = 'none';
-        closeBtn.style.display = 'none';
-      }
+    function getFilteredDestinations(filter) {
+        return filter === 'all'
+            ? destinations
+            : destinations.filter(dest => dest.theme === filter);
     }
-    window.addEventListener('resize', handleResize);
-    handleResize();
-  }
+
+    function updateActiveButton(clickedButton) {
+        filterButtons.forEach(btn => btn.classList.toggle('active', btn === clickedButton));
+    }
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+            const filtered = getFilteredDestinations(filter);
+            renderDestinations(filtered);
+            updateActiveButton(button);
+            localStorage.setItem('lastDestinationFilter', filter);
+        });
+    });
+
+    const savedFilter = localStorage.getItem('lastDestinationFilter') || 'all';
+    const defaultButton = Array.from(filterButtons).find(button => button.dataset.filter === savedFilter);
+    if (defaultButton) {
+        defaultButton.click();
+    } else {
+        renderDestinations(destinations);
+    }
 });
