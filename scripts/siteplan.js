@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     output.innerHTML = `
       <h3>${section.title}</h3>
       <p>${section.summary}</p>
-      <p><strong>Last selected:</strong> ${new Date().toLocaleString()}</p>
+      <p><strong>Last selected:</strong> 4 days ago</p>
     `;
   }
 
